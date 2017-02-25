@@ -4,6 +4,7 @@ import content.Test2Steps
 import content.TestSteps
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
+import steps.Repeat.Companion.repeat
 import steps.extensions.StepsResolver
 
 /**
@@ -29,6 +30,12 @@ class StepsContainerTest(
         testSteps
                 .test2Steps
                 .doSomeStep()
-        test2Steps.doSomeStep()
+        var test = "test"
+
+        repeat {
+            testSteps.doSomeStep()
+            test = "ok"
+        }
+                .waitingFor { test == "ok" }
     }
 }

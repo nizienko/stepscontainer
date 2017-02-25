@@ -1,6 +1,5 @@
 package content
 
-import steps.Inject
 import steps.Steps
 
 /**
