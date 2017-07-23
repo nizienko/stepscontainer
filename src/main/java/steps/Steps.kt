@@ -5,7 +5,7 @@ package steps
  */
 open abstract class Steps {
     init {
-        StepsInjector.autoInjectSteps(this)
+        autoInject(this)
         println("${this.javaClass} inited")
     }
 }

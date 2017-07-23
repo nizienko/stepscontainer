@@ -24,13 +24,10 @@ class StepsContainerTest(
     }
 
     @Test fun test3() {
-        println("Test2")
         testSteps
                 .doSomeStep()
-        testSteps
-                .test2Steps
-                .doSomeStep()
-        var test = "test"
+
+        var test = "not ok"
 
         repeat {
             testSteps.doSomeStep()
